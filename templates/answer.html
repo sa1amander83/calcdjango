@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+
+{% block calc %}
+{% endblock %}
+{% block content %}
+    <h3><a href="{% url 'calcmain' %}"> обратно на главную</a></h3>
+
+    <h2>Результат вычисления:</h2>
+    <p>{{ num1 }} {{ sign }} {{ num2 }}</p>
+    <hr>
+    <p>{{ answer }}</p>
+
+
+{% endblock %}

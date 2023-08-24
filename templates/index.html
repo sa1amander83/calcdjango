@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+</head>
+<body>
+{% block calc %}
+<div>
+<form method="post">
+
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" class="button" value="+" name="plus">
+    <input type="submit" class="button" value="-" name="minus">
+    <input type="submit" class="button" value="*" name="multiply">
+    <input type="submit" class="button" value="/" name="divide">
+
+</form>
+{% endblock %}
+{#{% if answer %}#}
+{#    <h2>Ответ: {{ answer }}</h2>#}
+{#{% endif %}#}
+
+</div>
+
+{% block content %}
+{% endblock %}
+</body>
+</html>
